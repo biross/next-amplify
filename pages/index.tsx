@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import { API, graphqlOperation } from "aws-amplify";
+import { API } from "aws-amplify";
 import { listBlogs } from "../src/graphql/queries";
 
 import BlogConnection from "../types/BlogsConnection";
@@ -11,18 +11,19 @@ export default function Blogs({ blogs }: { blogs: Blog[] }) {
 		<div className={styles.container}>
 			<h2>Blogs</h2>
 			<div className={styles.blogs}>
-				{blogs.map((blog) => {
-					blog.id;
-				})}
+				{blogs.map((blog) => (
+					<div key={blog.id} className={styles.blog}>
+						<div>{blog.name}</div>
+						<div>{blog.createdAt}</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);
 }
 
 export async function getServerSideProps() {
-	const blogsData = (await API.graphql(
-		graphqlOperation(listBlogs)
-	)) as BlogConnection;
+	const blogsData = (await API.graphql({ query: listBlogs })) as BlogConnection;
 	const blogs = blogsData.data.listBlogs.items;
 
 	return {

@@ -1,8 +1,29 @@
 .container {
+	padding-left: 30px;
+	padding-top: 30px;
 }
 
-.blogs {
+.blogs > .blog:not(:last-child) {
+	margin-bottom: 15px;
 }
 
 .blog {
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 25px;
+	width: fit-content;
+	cursor: pointer;
+}
+
+.blog:hover {
+	background-color: lightgray;
+}
+
+.blog:active {
+	background-color: darkgray;
+}
+
+.blog > div:first-child {
+	font-size: 16px;
+	font-weight: bold;
 }
