@@ -26,6 +26,7 @@ export default function BlogComponent() {
 	};
 
 	useEffect(() => {
+		console.log(router.route, router.query);
 		fetchBlog(router.query.bid);
 	}, [router.query.bid]);
 

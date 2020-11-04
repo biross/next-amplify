@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 import Link from "next/link";
 import styles from "./index.module.css";
@@ -11,6 +12,7 @@ import Blog from "../types/Blog";
 
 export default function BlogsComponent() {
 	const [blogs, setBlogs] = useState<Blog[]>([]);
+	const router = useRouter();
 
 	const fetchBlogs = async () => {
 		const blogsData = (await API.graphql({
@@ -22,6 +24,7 @@ export default function BlogsComponent() {
 	};
 
 	useEffect(() => {
+		console.log(router.route, router.query);
 		fetchBlogs();
 	}, []);
 
