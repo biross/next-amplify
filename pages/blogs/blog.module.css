@@ -1,0 +1,45 @@
+.container {
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.details .title {
+	font-weight: 500;
+	font-size: 16;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+.details .info {
+	font-size: 14;
+}
+
+.posts {
+	margin-top: 15px;
+}
+
+.posts > .title {
+	font-weight: 500;
+	font-size: 16;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+.posts > .post {
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 25px;
+	width: fit-content;
+	cursor: pointer;
+}
+
+.posts > .post:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.posts > .post:hover {
+	background-color: lightgray;
+}
+
+.posts > .post:active {
+	background-color: darkgray;
+}

@@ -1,12 +1,8 @@
-import Post from "./Post";
-
 export default interface Todo {
 	id: string;
-	name: string;
+	title: string;
+	blogId: string;
+	comments: [];
 	createdAt: string;
 	updatedAt: string;
-
-	posts: {
-		items: Post[];
-	};
 }

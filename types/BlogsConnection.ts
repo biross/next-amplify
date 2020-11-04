@@ -1,6 +1,6 @@
 import Blog from "./Blog";
 
-export default interface TodoConnection {
+export default interface BlogsConnection {
 	data: {
 		listBlogs: {
 			items: Blog[];
