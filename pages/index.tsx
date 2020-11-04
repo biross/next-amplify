@@ -25,7 +25,7 @@ export default function BlogsComponent({ blogs }: { blogs: Blog[] }) {
 	);
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	const blogsData = (await API.graphql({ query: listBlogs })) as BlogConnection;
 	const blogs = blogsData.data.listBlogs.items;
 

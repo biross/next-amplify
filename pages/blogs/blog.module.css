@@ -39,7 +39,3 @@
 .posts > .post:hover {
 	background-color: lightgray;
 }
-
-.posts > .post:active {
-	background-color: darkgray;
-}
