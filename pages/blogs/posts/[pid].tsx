@@ -1,4 +1,4 @@
-import styles from "./blog.module.css";
+import styles from "./post.module.css";
 
 import { API } from "aws-amplify";
 import { getPost } from "../../../src/graphql/queries";
