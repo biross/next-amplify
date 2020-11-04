@@ -17,9 +17,6 @@
           "appId": "d207bo7awn2irc",
           "type": "cicd"
         }
-      },
-      "auth": {
-        "nextamplify7cc82e04": {}
       }
     }
   }

@@ -24,12 +24,5 @@
       }
     }
   },
-  "auth": {
-    "nextamplify7cc82e04": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
-  }
+  "auth": {}
 }
