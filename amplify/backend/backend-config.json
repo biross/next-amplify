@@ -1,13 +1,6 @@
 {
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
-      "type": "cicd",
-      "lastPushTimeStamp": "2020-11-03T21:44:26.056Z"
-    }
-  },
   "api": {
-    "movies": {
+    "nextamplify": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -16,7 +9,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "movies"
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []
@@ -24,5 +17,5 @@
       }
     }
   },
-  "auth": {}
+  "hosting": {}
 }
